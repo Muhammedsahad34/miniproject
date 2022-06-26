@@ -18,19 +18,27 @@
     $user= $stm->get_result();
     
     if($user->num_rows > 0){
-      echo '<script>alert("email already exist")</script>';
+      echo ("<script LANGUAGE='JavaScript'>
+  window.alert(' email already exist');
+  window.location.href='signup.html';
+  </script>");
     }
     else{
     $stmt = $conn->prepare("insert into details(firstname, lastname, email, password, confirmpassword, mobilenumber)values(?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssi",$firstname, $lastname, $email, $password, $confirmpassword, $mobilenumber);
     $stmt->execute();
-    header("location:candidate.html");
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Succesfully Updated');
+    window.location.href='candidate.html';
+    </script>");
     $stmt->close();
     $conn->close();
   }}
 }else{
-    echo '<script>alert("password not matching")</script>';
-    
+  echo ("<script LANGUAGE='JavaScript'>
+  window.alert(' password not matching');
+  window.location.href='signup.html';
+  </script>");
 }
   
 

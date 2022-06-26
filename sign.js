@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $("#signup").validate({
+        rules:{
+            password:{
+                required:true,
+                minlength:8
+            }
+        }
+    })
+})
