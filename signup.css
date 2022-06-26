@@ -1,0 +1,69 @@
+body{
+    margin:0px;
+}
+.main{
+    width: 100%;
+    height:100px;
+    background-color: lightblue;
+}
+.title{
+     
+    padding-left: 510px;
+    padding-top: 25px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.signup{
+    border:solid 2px;
+    background:linear-gradient(white,#d3d8e8,#d6dfe7);
+    width:500px;
+    height:500px;
+    margin-left: 400px;
+    margin-top: 34px;
+}
+.emal{
+    margin-left: 82px;
+    height: 25px;
+    width: 329px;
+    margin-top: 20px;
+}
+.password{
+    margin-left: 82px;
+    height:25px;
+    width:329px;
+    margin-top: 20px;
+}
+.submit{
+    height: 31px;
+    margin-left: 200px;
+    margin-top: 50px;
+    width: 100px;
+    color: brown;
+    cursor: pointer;
+    background: blue;
+    color: white;
+    font-weight: bold;
+}
+.email{
+    padding-left: 183px;
+    color:#666;
+}
+.firstname{
+    margin-left: 82px;
+    height:25px;
+    width:329px;
+}
+.lastname{
+    margin-left: 82px;
+    height:25px;
+    width:329px;
+    margin-top: 20px;
+
+}
+.number{
+    margin-left: 82px;
+    height:25px;
+    width:329px;
+    margin-top: 20px;
+
+}

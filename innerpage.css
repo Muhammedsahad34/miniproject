@@ -1,0 +1,30 @@
+body{
+   background-color:rgb(255, 255, 255);
+}
+.main{
+    width: 400px;
+    height: 452px;
+    background-color:  #d3d8e8;
+    margin-left: 455px;
+    margin-top: 100px;
+    border: solid 5px;
+    border-color: black;
+}
+.event{
+    width: 200px;
+    height: 100px;
+    margin-left: 91px;
+    margin-top: 67px;
+    font-size: large;
+    cursor: pointer;
+    
+}
+.cert{
+    width: 200px;
+    height: 100px;
+    margin-left: 91px;
+    margin-top: 100px;
+    font-size: large;
+    cursor: pointer;
+    
+}

@@ -1,0 +1,33 @@
+.main{
+    border:solid 2px;
+    background:linear-gradient(white,#d3d8e8,#ffffff);
+    width:500px;
+    height:500px;
+    margin-left: 400px;
+    margin-top: 80px;
+}
+.title{
+   padding-left: 88px;
+   font-weight: bold;
+}
+
+.cand{
+    padding-left: 9px;
+    margin-left: 88px;
+    width: 324px;
+    height: 99px;
+    font-size: 34px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.coord{
+    padding-left: 9px;
+    margin-left: 88px;
+    width: 324px;
+    height: 99px;
+    margin-top: 83px;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+
