@@ -1,0 +1,69 @@
+.mecaf{
+    width: 500px;
+    height: 200px;
+    background-color: darkgray;
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(231, 231, 238);
+    background-image: url("index.jpeg");
+    padding-top: 38px;
+    margin-left: 15px;
+    cursor: pointer; 
+    
+}
+body{
+    background: linear-gradient(rgb(32, 8, 88),#d3d8e8,#3e52be);
+    
+}
+.mecasm{
+    width: 500px;
+    height: 200px;
+    background-color: darkgray;
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(231, 231, 238);
+    padding-top: 38px;
+    margin-left: 300px;
+    background-image: url("download.jpeg");
+    cursor: pointer;
+
+
+}
+.ieee{
+    width: 500px;
+    height: 200px;
+    background-color: darkgray;
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(231, 231, 238);
+    padding-top: 38px;
+    margin-top: 15px;
+    background-image: url("131173.jpg");
+    margin-left: 15px;
+    cursor: pointer;
+}
+.iedc{
+    width: 500px;
+    height: 200px;
+    background-color: darkgray;
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(231, 231, 238);
+    padding-top: 38px;
+    margin-top: 15px;
+    background-image: url("131173.jpg");
+    margin-left: 300px;
+    cursor: pointer;
+}
+.home{
+    width: 500px;
+    height: 200px;
+    background-color: rgb(41, 21, 21);
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(231, 231, 238);
+    padding-top: 38px;
+    margin-top: 15px;
+    margin-left: 420px;
+    cursor: pointer;
+}
