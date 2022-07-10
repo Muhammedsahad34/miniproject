@@ -6,7 +6,7 @@
   if($con->connect_error){
     die("Failed to connect : ".$con->connect_error);
   }else{
-    $stmt = $con->prepare("select * from details where email = ?");
+    $stmt = $con->prepare("select * from coorddetails where email = ?");
     $stmt->bind_param("s",$email);
     $stmt->execute();
     $stmt_result = $stmt->get_result();
@@ -15,18 +15,18 @@
       if($data['password'] === $password){
         echo ("<script LANGUAGE='JavaScript'>
         window.alert(' login successfull ');
-        window.location.href='innerpage.html';
+        window.location.href='coordinner.html';
         </script>");
       }else{
         echo ("<script LANGUAGE='JavaScript'>
         window.alert(' Invalid email or password ');
-        window.location.href='candidate.html';
+        window.location.href='coordinator.html';
         </script>");
-      }
+      } 
     }else{
       echo ("<script LANGUAGE='JavaScript'
       window.alert(' Invalid email or password ');
-      window.location.href='candidate.html';
+      window.location.href='coordinator.html';
       </script>");
     }
   }

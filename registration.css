@@ -37,8 +37,13 @@ body{
     font-size: 50px;
     color: rgb(231, 231, 238);
     padding-top: 38px;
-    margin-top: 15px;
-    background-image: url("131173.jpg");
+    margin-top: 5px;
+    background-image: url("iedc_sb.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 530px;
+   
     margin-left: 15px;
     cursor: pointer;
 }
@@ -50,18 +55,22 @@ body{
     font-size: 50px;
     color: rgb(231, 231, 238);
     padding-top: 38px;
-    margin-top: 15px;
-    background-image: url("131173.jpg");
+    margin-top: 10px;
+    background-image: url("ieeesb.jpg");
+    background-size: 494px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
     margin-left: 300px;
     cursor: pointer;
 }
 .home{
     width: 500px;
     height: 200px;
-    background-color: rgb(41, 21, 21);
+    background-color: rgb(209, 18, 18);
     font-weight: bolder;
     font-size: 50px;
-    color: rgb(231, 231, 238);
+    color: rgb(226, 219, 219);
     padding-top: 38px;
     margin-top: 15px;
     margin-left: 420px;

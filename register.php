@@ -1,4 +1,5 @@
 <?php
+$full_name = $_POST['full_name'];
   $register_number = $_POST['register_number'];
   $year = $_POST['year'];
   $class = $_POST['class'];
@@ -11,7 +12,7 @@
     die('connection failed'.$conn->connect_error);
   }else{ 
     $stm = $conn->prepare("select * from registration where register_number=?");
-    $stm->bind_param("s",$email);
+    $stm->bind_param("s",$register_number);
     $stm->execute();
     $user= $stm->get_result();
     if($user->num_rows > 0){
@@ -21,8 +22,8 @@
     </script>");
     }
     else{
-        $stmt = $conn->prepare("insert into registration(register_number, year, class, event1, event2, event3)values(?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sissss", $register_number,$year, $class, $event1, $event2, $event3);
+        $stmt = $conn->prepare("insert into registration(full_name, register_number, year, class, event1, event2, event3)values(?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssissss",$full_name, $register_number,$year, $class, $event1, $event2, $event3);
         $stmt->execute();
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Succesfully registered');
