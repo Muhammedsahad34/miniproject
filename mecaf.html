@@ -1,82 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mecaf registration</title>
-    <link href="mecaf.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="register">
-        <h1 class="heading">MECAF</h1>
-        <form action="register.php" method="post">
-            <label class="re">Full Name</label>
-            <input type="text" class="regno" name="full_name" required>
-            <br>
-            <br>
-            <label class="re">Register Number</label>
-        <input class="regno" type="text" name="register_number" required>
-        <br>
-        <br>
-        <label class="re">year of studying</label>
-        <select class="year" name="year">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <label class="re">Class</label>
-        <select class="cls" name="class">
-            
-            <option value="cse">CS1</option>
-            <option value="cse2">CS2</option>
-            <option value="ce1">CE1</option>
-            <option value="ce2">CE2</option>
-            <option value="me1">ME1</option>
-            <option value="me2">ME2</option>
-            <option value="ece">EC</option>
-            <option value="eee">EEE</option>
-            <option value="it">IT</option>
-        </select>
-        <br>
-        <br>
-        <label class="re">select event 1</label>
-        <select class="events" required name="event1">
-            
-            <option value="duffmuttu">Duff muttu</option>
-            <option value="vattapattu">Vatta pattu</option>
-            <option value="kolkali">Kolkali</option>
-            <option value="groupsong">Group song</option>
-            <option value="groupdance">Group dance</option>
-        </select> 
-        <br>
-        <br>
-        <label class="re">select event 2</label>
-        <select class="events2" name="event2">
-            <option value="option">Select a event...</option>
-            <option value="duffmuttu">Duff muttu</option>
-            <option value="vattapattu">Vatta pattu</option>
-            <option value="kolkali">Kolkali</option>
-            <option value="groupsong">Group song</option>
-            <option value="groupdance">Group dance</option>
-        </select> 
-        <br>
-        <br>
-        <label class="re">select event 3</label>
-        <select class="events3" required name="event3">
-            <option value="option">Select a event...</option>
-            <option value="duffmuttu">Duff muttu</option>
-            <option value="vattapattu">Vatta pattu</option>
-            <option value="kolkali">Kolkali</option>
-            <option value="groupsong">Group song</option>
-            <option value="groupdance">Group dance</option>
-        </select> 
-        <br>
-        <br>
-        <input class="submit" type="submit" value="submit">
 
-        </form>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4 pl-4  ">
+        <div class="row pl-4">
+            <div class="form-control bg-dark">
+                <h1 class="display-1 text-white bg-dark text-center">MECAF</h1>
+                <form action="register.php" method="post">
+                    <label for="exampleInputEmail1" class="text-white bg-dark pl-4">Full Name</label>
+                    <input type="text" class="form-control pl-4" name="full_name" required style="width:300px;">
+                    <br>
+                    <br>
+                    <label for="exampleInputEmail1" class="text-white bg-dark">Register Number</label>
+                    <input class="form-control" type="text" name="register_number" required style="width:300px;">
+                    <br>
+                    <br>
+                    <label for="exampleInputEmail1" class="text-white bg-dark">year of studying</label>
+                    <select class="year" name="year">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label for="exampleInputEmail1" class="text-white bg-dark">Class</label>
+                    <select name="class">
+
+                        <option value="cse">CS1</option>
+                        <option value="cse2">CS2</option>
+                        <option value="ce1">CE1</option>
+                        <option value="ce2">CE2</option>
+                        <option value="me1">ME1</option>
+                        <option value="me2">ME2</option>
+                        <option value="ece">EC</option>
+                        <option value="eee">EEE</option>
+                        <option value="it">IT</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="exampleInputEmail1" class="text-white bg-dark">select event 1</label>
+                    <select required name="event1">
+
+                        <option value="duffmuttu">Duff muttu</option>
+                        <option value="vattapattu">Vatta pattu</option>
+                        <option value="kolkali">Kolkali</option>
+                        <option value="groupsong">Group song</option>
+                        <option value="groupdance">Group dance</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="exampleInputEmail1" class="text-white bg-dark">select event 2</label>
+                    <select name="event2">
+                        <option value="">Select a event...</option>
+                        <option value="duffmuttu">Duff muttu</option>
+                        <option value="vattapattu">Vatta pattu</option>
+                        <option value="kolkali">Kolkali</option>
+                        <option value="groupsong">Group song</option>
+                        <option value="groupdance">Group dance</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="exampleInputEmail1" class="text-white bg-dark">select event 3</label>
+                    <select name="event3">
+                        <option value="">Select a event...</option>
+                        <option value="duffmuttu">Duff muttu</option>
+                        <option value="vattapattu">Vatta pattu</option>
+                        <option value="kolkali">Kolkali</option>
+                        <option value="groupsong">Group song</option>
+                        <option value="groupdance">Group dance</option>
+                    </select>
+                    <br>
+                    <br>
+                    <input class="btn btn-success" type="submit" value="submit">
+
+                </form>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

@@ -1,3 +1,20 @@
+<?php
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $database = "signup";
+
+     $connection = mysqli_connect($servername, $username, $password, $database);
+
+     if (isset($_GET['id'])){
+        $id=$_GET['id'];
+        $delete=mysqli_query($connection,"DELETE FROM registration WHERE `registration`.`id` = $id");
+    }
+
+     $sql = "SELECT * FROM `registration`";
+     $query = mysqli_query($connection,$sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,256 +23,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mea engineering college</title>
 <link href="mecafview.css" rel="stylesheet" type="text/css">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-    <h1>List of candidates for duffmuttu</h1>
+    <h1>List of candidates for Events</h1>
     <br>
-    <table>
+    <table class="table table-dark">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Register Number</th>
-                <th>Year</th>
-                <th>Class</th>
+                <th scope="col">ID</th>
+                <th scope="col">Full name</th>
+                <th scope="col">Register Number</th>
+                <th scope="col">Year</th>
+                <th scope="col">Class</th>
+                <th scope="col">Event-1</th>
+                <th scope="col">Event-2</th>
+                <th scope="col">Event-3</th>
+                <th scope="col">Participation Status</th>
                 
             </tr>
            
         </thead>
         <tbody>
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "signup";
 
-            $connection = new mysqli($servername, $username, $password, $database);
+            $num=mysqli_num_rows($query);
 
-            if($connection->connect_error){
-                die("connection failed: ".$connection->connect_error);
-            }
-
-            $sql = "SELECT * FROM `registration` WHERE event1='duffmuttu' OR event2='duffmuttu' OR event3='duffmuttu'";
-            $result = $connection->query($sql);
-
-            if(!$result){
-                die("Invalid query: " .$connection->error);
-            }
-
-            while($row = $result->fetch_assoc()){
+           if($num>0){
+            while($result=mysqli_fetch_assoc($query)){
 
             
             echo "<tr>
-                <td>".$row["id"] ."</td>
-                <td>".$row["full_name"] ."</td>
-                <td>".$row["register_number"] ."</td>
-                <td>".$row["year"] ."</td>
-                <td>".$row["class"] ."</td>
+                <td>".$result['id'] ."</td>
+                <td>".$result['full_name'] ."</td>
+                <td>".$result['register_number'] ."</td>
+                <td>".$result['year'] ."</td>
+                <td>".$result['class'] ."</td>
+                <td>".$result['event1']."</td>
+                <td>".$result['event2']."</td>
+                <td>".$result['event3']."</td>
+                <td><a href='status.php?id=".$result['id']."'  class='btn btn-primary'>Participated </a>
+                <a href='mecafview.php?id=".$result['id']."' onclick='return confirm()' class='btn btn-danger'>Not Participated </a></td>
                 </tr>";
-            }
+            }}
             ?>
 
         </tbody>
     </table>
 
-    <h1>List of candidates for vattapattu</h1>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Register Number</th>
-                <th>Year</th>
-                <th>Class</th>
-                
-            </tr>
-           
-        </thead>
-        <tbody>
-            <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "signup";
-
-            $connection = new mysqli($servername, $username, $password, $database);
-
-            if($connection->connect_error){
-                die("connection failed: ".$connection->connect_error);
-            }
-
-            $sql = "SELECT * FROM `registration` WHERE event1='vattapattu' OR event2='vattapattu' OR event3='vattapattu'";
-            $result = $connection->query($sql);
-
-            if(!$result){
-                die("Invalid query: " .$connection->error);
-            }
-
-            while($row = $result->fetch_assoc()){
-
-            
-            echo "<tr>
-                <td>".$row["id"] ."</td>
-                <td>".$row["full_name"] ."</td>
-                <td>".$row["register_number"] ."</td>
-                <td>".$row["year"] ."</td>
-                <td>".$row["class"] ."</td>
-                </tr>";
-            }
-            ?>
-
-        </tbody>
-    </table>
-
-    <h1>List of candidates for kolkali</h1>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Register Number</th>
-                <th>Year</th>
-                <th>Class</th>
-                
-            </tr>
-           
-        </thead>
-        <tbody>
-            <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "signup";
-
-            $connection = new mysqli($servername, $username, $password, $database);
-
-            if($connection->connect_error){
-                die("connection failed: ".$connection->connect_error);
-            }
-
-            $sql = "SELECT * FROM `registration` WHERE event1='kolkali' OR event2='kolkali' OR event3='kolkali'";
-            $result = $connection->query($sql);
-
-            if(!$result){
-                die("Invalid query: " .$connection->error);
-            }
-
-            while($row = $result->fetch_assoc()){
-
-            
-            echo "<tr>
-                <td>".$row["id"] ."</td>
-                <td>".$row["full_name"] ."</td>
-                <td>".$row["register_number"] ."</td>
-                <td>".$row["year"] ."</td>
-                <td>".$row["class"] ."</td>
-                </tr>";
-            }
-            ?>
-
-        </tbody>
-    </table>
-
-    <h1>List of candidates for Group Song</h1>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Register Number</th>
-                <th>Year</th>
-                <th>Class</th>
-                
-            </tr>
-           
-        </thead>
-        <tbody>
-            <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "signup";
-
-            $connection = new mysqli($servername, $username, $password, $database);
-
-            if($connection->connect_error){
-                die("connection failed: ".$connection->connect_error);
-            }
-
-            $sql = "SELECT * FROM `registration` WHERE event1='groupsong' OR event2='groupsong' OR event3='groupsong'";
-            $result = $connection->query($sql);
-
-            if(!$result){
-                die("Invalid query: " .$connection->error);
-            }
-
-            while($row = $result->fetch_assoc()){
-
-            
-            echo "<tr>
-                <td>".$row["id"] ."</td>
-                <td>".$row["full_name"] ."</td>
-                <td>".$row["register_number"] ."</td>
-                <td>".$row["year"] ."</td>
-                <td>".$row["class"] ."</td>
-                </tr>";
-            }
-            ?>
-
-        </tbody>
-    </table>
-
-    <h1>List of candidates for Group Dance</h1>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Register Number</th>
-                <th>Year</th>
-                <th>Class</th>
-                
-            </tr>
-           
-        </thead>
-        <tbody>
-            <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "signup";
-
-            $connection = new mysqli($servername, $username, $password, $database);
-
-            if($connection->connect_error){
-                die("connection failed: ".$connection->connect_error);
-            }
-
-            $sql = "SELECT * FROM `registration` WHERE event1='groupdance' OR event2='groupdance' OR event3='groupdance'";
-            $result = $connection->query($sql);
-
-            if(!$result){
-                die("Invalid query: " .$connection->error);
-            }
-
-            while($row = $result->fetch_assoc()){
-
-            
-            echo "<tr>
-                <td>".$row["id"] ."</td>
-                <td>".$row["full_name"] ."</td>
-                <td>".$row["register_number"] ."</td>
-                <td>".$row["year"] ."</td>
-                <td>".$row["class"] ."</td>
-                </tr>";
-            }
-            ?>
-
-        </tbody>
-    </table>
+    
 </body>
 </html>
